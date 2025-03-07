@@ -11,8 +11,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/users", routes);  //will be prefixed with /api/users
-
+app.use("/api", routes);  //prefixed with /api
 // Connect to MongoDB
 async function connectDB() {
     try {
